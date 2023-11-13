@@ -1,0 +1,17 @@
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\BLL\bin\Debug\net6.0\BLL.deps.json
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\BLL\bin\Debug\net6.0\BLL.dll
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\BLL\bin\Debug\net6.0\BLL.pdb
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\BLL\bin\Debug\net6.0\DAL.dll
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\BLL\bin\Debug\net6.0\Entity.dll
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\BLL\bin\Debug\net6.0\DAL.pdb
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\BLL\bin\Debug\net6.0\Entity.pdb
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\BLL\obj\Debug\net6.0\BLL.csproj.AssemblyReference.cache
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\BLL\obj\Debug\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\BLL\obj\Debug\net6.0\BLL.AssemblyInfoInputs.cache
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\BLL\obj\Debug\net6.0\BLL.AssemblyInfo.cs
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\BLL\obj\Debug\net6.0\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\BLL\obj\Debug\net6.0\BLL.csproj.CopyComplete
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\BLL\obj\Debug\net6.0\BLL.dll
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\BLL\obj\Debug\net6.0\refint\BLL.dll
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\BLL\obj\Debug\net6.0\BLL.pdb
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\BLL\obj\Debug\net6.0\ref\BLL.dll

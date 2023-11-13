@@ -1,0 +1,11 @@
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\Entity\bin\Debug\net6.0\Entity.deps.json
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\Entity\bin\Debug\net6.0\Entity.dll
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\Entity\bin\Debug\net6.0\Entity.pdb
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\Entity\obj\Debug\net6.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\Entity\obj\Debug\net6.0\Entity.AssemblyInfoInputs.cache
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\Entity\obj\Debug\net6.0\Entity.AssemblyInfo.cs
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\Entity\obj\Debug\net6.0\Entity.csproj.CoreCompileInputs.cache
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\Entity\obj\Debug\net6.0\Entity.dll
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\Entity\obj\Debug\net6.0\refint\Entity.dll
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\Entity\obj\Debug\net6.0\Entity.pdb
+C:\Users\Oscar\OneDrive\Documentos\PIA_PROGRA\Entity\obj\Debug\net6.0\ref\Entity.dll
