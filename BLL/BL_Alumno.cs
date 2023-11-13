@@ -89,7 +89,7 @@ namespace BLL
                     P_Nombre = alumno.Nombre,
                     P_APaterno = alumno.Apaterno,
                     P_AMaterno = alumno.Amaterno,
-                    p_Correo_Uni = alumno.Correo_Uni
+                    P_Correo_Uni = alumno.Correo_Uni
                 };
 
                 Contexto.Procedimiento_StoreDB(Cadena, "spAddAlumno", dpParametros);
@@ -112,11 +112,11 @@ namespace BLL
             {
                 var dpParametros = new
                 {
-                    P_Nombre = alumno.Nombre,
-                    P_APaterno = alumno.Apaterno,
-                    P_AMaterno = alumno.Amaterno,
-                    p_Correo_Uni = alumno.Correo_Uni,
-                    P_IdMatricula= alumno.IdMatricula
+                    Nombre = alumno.Nombre,
+                    APaterno = alumno.Apaterno,
+                    AMaterno = alumno.Amaterno,
+                    Correo_Uni = alumno.Correo_Uni,
+                    IdMatricula= alumno.IdMatricula
                 };
 
                 Contexto.Procedimiento_StoreDB(Cadena, "modificar", dpParametros);
