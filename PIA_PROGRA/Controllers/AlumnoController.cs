@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using BLL;
 using Entity;
+using Microsoft.Extensions.Configuration; 
+using System.Collections.Generic; 
+using Microsoft.AspNetCore.Authorization;
 
 namespace PIA_PROGRA.Controllers
 {
@@ -21,8 +24,27 @@ namespace PIA_PROGRA.Controllers
 
         public IActionResult Guardar([FromBody] DtoAlumno alumno)
         {
-            return Ok();
+            List<string> lstValidaciones = BL_Alumno.Validar(Cadena, alumno);
+
+            if (lstValidaciones.Count == 0)
+            {
+                List<string> lstDatos = BL_Alumno.GuardarInfo(Cadena, alumno);
+
+                if (lstDatos[0] == "00")
+                {
+                    return Ok(new { codigo = "80", response = "Ok" });
+                }
+                else
+                {
+                    return Ok(new { codigo = "14", response = lstDatos });
+                }
+            }
+            else
+            {
+                return Ok(new { codigo = "14", response = lstValidaciones });
+            }
         }
+
 
         [HttpGet]
         [Route("GetAll")]
@@ -32,6 +54,33 @@ namespace PIA_PROGRA.Controllers
 
             return Ok(new { codigo = "00", response = lstalumno });
         }
+
+
+        [HttpPut]
+        [Route("Modificar")]
+        public IActionResult Modificar([FromBody] DtoAlumno alumno)
+        {
+            List<string> lstValidaciones = BL_Alumno.Validar(Cadena, alumno);
+
+            if (lstValidaciones.Count == 0)
+            {
+                List<string> lstDatos = BL_Alumno.Editar(Cadena, alumno);
+
+                if (lstDatos[0] == "00")
+                {
+                    return Ok(new { codigo = "80", response = "Ok" });
+                }
+                else
+                {
+                    return Ok(new { codigo = "14", response = lstDatos });
+                }
+            }
+            else
+            {
+                return Ok(new { codigo = "14", response = lstValidaciones });
+            }
+        }
+
 
         [HttpDelete]
         [Route("BorrarInfo/{IdMatricula:int}")]
