@@ -36,6 +36,29 @@ namespace BLL
             return lstDatos;
         }
 
+        public static List<string> Borrar(string Cadena, int pIdMatricula)
+        {
+            List<string> lstDatos = new List<string>();
+            try
+            {
+                var dpParametros = new
+                {
+                    IdMatricula = pIdMatricula
+                };
+
+                Contexto.Procedimiento_StoreDB(Cadena, "Eliminar", dpParametros);
+
+                lstDatos.Add("00");
+                lstDatos.Add("El alumno fue borrado con éxito");
+            }
+            catch (SqlException ex)
+            {
+                lstDatos.Add("14");
+                lstDatos.Add(ex.Message);
+            }
+            return lstDatos;
+        }
+
         public static List<DtoAlumno> MostrarAlumnos(string PCadena)
         {
             List<DtoAlumno> lstalumno = new List<DtoAlumno>();

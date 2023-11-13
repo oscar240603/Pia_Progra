@@ -33,5 +33,22 @@ namespace PIA_PROGRA.Controllers
             return Ok(new { codigo = "00", response = lstalumno });
         }
 
+        [HttpDelete]
+        [Route("BorrarInfo/{IdMatricula:int}")]
+        public IActionResult BorrarInfo(int IdMatricula)
+        {
+            List<string> lstDatos = BL_Alumno.Borrar(Cadena, IdMatricula);
+
+            if (lstDatos[0] == "00")
+            {
+                return Ok(new { codigo = "80", response = "Ok" });
+            }
+            else
+            {
+                return Ok(new { codigo = "14", response = lstDatos });
+            }
+
+        }
+
     }
 }
