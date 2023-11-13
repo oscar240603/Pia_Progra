@@ -35,11 +35,6 @@ namespace BLL
                 lstValidaciones.Add("Revise el Apellido materno");
             }
 
-            if (ValidacionTexto(alumno.Correo_Uni))
-            {
-                lstValidaciones.Add("Revise el Correo Universitario");
-            }
-
             //if (ValidacionTexto(alumno.IdMatricula))
             //{
             //    lstValidaciones.Add("Revise la Matrícula");
@@ -59,7 +54,7 @@ namespace BLL
                 P_Texto = alumno
             };
 
-            DataTable Dt = Contexto.Funcion_StoreDB(PCadena, "Buscar", dpParametros);
+            DataTable Dt = Contexto.Funcion_StoreDB(PCadena, "spConsultarAlumnos", dpParametros);
             if (Dt.Rows.Count > 0)
             {
                 Validacion = true;
@@ -94,11 +89,10 @@ namespace BLL
                     P_Nombre = alumno.Nombre,
                     P_APaterno = alumno.Apaterno,
                     P_AMaterno = alumno.Amaterno,
-                    p_Correo_Uni = alumno.Correo_Uni,
-                    P_IdMatricula = alumno.IdMatricula
+                    p_Correo_Uni = alumno.Correo_Uni
                 };
 
-                Contexto.Procedimiento_StoreDB(Cadena, "registrar", dpParametros);
+                Contexto.Procedimiento_StoreDB(Cadena, "spAddAlumno", dpParametros);
 
                 lstDatos.Add("00");
                 lstDatos.Add("El alumno fue registrado con éxito");
@@ -161,27 +155,28 @@ namespace BLL
             return lstDatos;
         }
 
-        public static List<DtoAlumno> MostrarAlumnos(string PCadena)
+        public static List<DtoBuscar_Eliminar> MostrarAlumnos(string PCadena)
         {
-            List<DtoAlumno> lstalumno = new List<DtoAlumno>();
-
-            DataTable Dt = Contexto.Funcion_StoreDB(PCadena, "MostrarTodo");
+            List<DtoBuscar_Eliminar> lstalumnos = new List<DtoBuscar_Eliminar>();
+            var dpParametros = new
+            {
+                P_Accion = 1
+            };
+            DataTable Dt = Contexto.Funcion_StoreDB(PCadena, "spConsultarAlumnos",dpParametros);
 
             if (Dt.Rows.Count > 0)
             {
-                lstalumno = (from item in Dt.AsEnumerable()
-                              select new DtoAlumno
+                lstalumnos = (from item in Dt.AsEnumerable()
+                              select new DtoBuscar_Eliminar
                               {
                                   IdMatricula = item.Field<int>("IdMatricula"),
-                                  Nombre = item.Field<string>("Nombre"),
-                                  Apaterno = item.Field<string>("Apaterno"),
-                                  Amaterno = item.Field<string>("Amaterno"),
+                                  Nombre_Completo = item.Field<string>("Nombre_Completo"),
                                   Correo_Uni = item.Field<string>("Correo_Uni"),
-                                  FechaRegistro = item.Field<string>("Registro")
+                                  Registro = item.Field<string>("Registro")
                               }).ToList();
             }
 
-            return lstalumno;
+            return lstalumnos;
         }
 
     }

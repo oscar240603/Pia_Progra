@@ -7,6 +7,5 @@
         public string Apaterno { get; set; }
         public string Amaterno { get; set; }
         public string Correo_Uni { get; set; }
-        public string FechaRegistro { get; set; }
     }
 }

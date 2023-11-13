@@ -50,7 +50,7 @@ namespace PIA_PROGRA.Controllers
         [Route("GetAll")]
         public IActionResult GetAll()
         {
-            List<DtoAlumno> lstalumno = BL_Alumno.MostrarAlumnos(Cadena);
+            List<DtoBuscar_Eliminar> lstalumno = BL_Alumno.MostrarAlumnos(Cadena);
 
             return Ok(new { codigo = "00", response = lstalumno });
         }
