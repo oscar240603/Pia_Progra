@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using BLL;
+using Entity;
 
 namespace PIA_PROGRA.Controllers
 {
@@ -9,9 +11,9 @@ namespace PIA_PROGRA.Controllers
         [HttpPost]
         [Route("Guardar")]
 
-        public IActionResult Guardar()
+        public IActionResult Guardar([FromBody] DtoAlumno alumno)
         {
-
+            return Ok();
         }
 
     }
